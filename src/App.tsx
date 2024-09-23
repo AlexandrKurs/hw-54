@@ -37,9 +37,10 @@ const App = () => {
     const [death, setDeath] = React.useState(false);
     const [field, setField] = React.useState<number[]>(() => createField(size));
     const [mask, setMask] = React.useState<Mask[]>(() => new Array(size * size).fill(Mask.Fill));
-
+    let count: number = 0;
     return (
         <div>
+            count = {count};
             {dimension.map((_, y) => {
                 return (<div key={y} style={{ display: "flex" }}>
                     {dimension.map((_, x) => {
